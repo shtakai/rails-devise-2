@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+TWITTER_API_KEY = ENV['TWITTER_API_KEY']
+TWITTER_API_SECRET = ENV['TWITTER_API_SECRET']
+
 module RailsDevise2
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
